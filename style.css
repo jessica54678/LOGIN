@@ -4,7 +4,7 @@
     --main-color: #d3ad7f;
     --black: #13131a;
     --bg: #010103;
-    --border: 1rem solid rgba(255,255, 255,.3);
+    --border: 0.5rem solid rgba(255,255, 255,.3);
 }
 
 *{
@@ -44,10 +44,14 @@ body{
     background: var(--bg);
 }
 
+section{
+    padding: 2rem 7%;
+}
+
 .btn{
     margin-top: 1rem;
     display: inline-block;
-    padding: 9rem 3rem;
+    padding: .9rem 3rem;
     font-size: 1.7rem;
     color: #fff;
     background: var(--main-color);
@@ -76,16 +80,16 @@ body{
     height: 6rem;
 }
 
-.header .navclass a{
+.header .navbar a{
     margin:0 1rem;
     font-size: 1.6rem;
     color: #fff;
 
 }
 
-.header .navclass a:hover{
+.header .navbar a:hover{
     color: var(--main-color);
-    border-bottom: 1rem solid var(--main-color); 
+    border-bottom: .1rem solid var(--main-color); 
     padding-bottom: .5rem;  
 }
 
@@ -169,7 +173,7 @@ body{
 .header .cart-items-container .cart-item .fa-times{
     position: absolute;
     top:1rem; right:1rem;
-    font-size: 2rem;
+    font-size: 2rem;   
     cursor: pointer;
     color: var(--black);
 }
@@ -197,6 +201,39 @@ body{
     width: 100%;
     text-align: center;
 }
+
+.home{
+    min-height: 105vh;
+    display: flex;
+    align-items: center;
+    background: url(newbg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 60rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #eee;
+}
+
+
+
+
+
+
 
 
     #menu-btn{
@@ -228,10 +265,15 @@ body{
     }
 
     .header{
-        padding: 1.5rem;
+        padding: 1.5rem 2rem;
+    }
+    
+    section{
+        padding: 2rem;
     }
     
 }
+        
 
 @media (max-width:768px){
     #menu-btn{
@@ -241,12 +283,12 @@ body{
     .header .navbar{
         position: absolute;
         top:100%;
-        right:-100%;
+        right: 0;
         background: #fff;
         width: 30rem;
         height: calc(100vh - 9.5rem);
     }
-
+  
     .header .navbar .active{
         right: 0;
     }
@@ -263,6 +305,21 @@ body{
         width:90%;
         right:2rem;
     }
+
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+
+    .home .content p{
+        font-size: 1.5rem;
+    }
+
 
     @media (max-width:450px){
         html{
